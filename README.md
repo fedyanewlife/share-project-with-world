@@ -58,7 +58,9 @@ _Название коммита_:
 Статусы файлов:
 ```mermaid
 graph LR;
-  untracked/modified -- "git add" --> staged;
-  staged    -- "git commit"     --> tracked/comitted;
-  tracked/staged    -- "изменить_файл"     --> modified
+  untracked -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked;
+  staged    -- "изменение файла"     --> modified;
+  tracked    -- "изменение файла"     --> modified;
+  modified    -- "git add" --> staged;
 ```
